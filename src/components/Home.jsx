@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext  } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
             {
                 data ? data.map((item, key) => {
                     return(
-                        <div>{item.name.common}</div>
+                        <Link key={key} to={`/CountryDetails/${key}`}>{item.name.common}</Link>
                     )
                 }) : ""
             }
