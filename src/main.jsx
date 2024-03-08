@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
@@ -10,15 +10,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-
 const router = createBrowserRouter([
   {
-    path: "/Home",
+    path: "/Home/:theme",
     element: <Home/>,
   },
   {
-    path: "/CountryDetails/:id",
-    element: <CountryDetails/>,
+    path: "/Home/CountryDetails/:theme/:id",
+    element: <CountryDetails nightMode/>,
   },
  ]);
 
