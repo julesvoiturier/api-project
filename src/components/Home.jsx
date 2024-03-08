@@ -32,7 +32,7 @@ const Home = () => {
         <div className={`w-full flex flex-col items-center gap-12 transition-all ${nightMode ? `bg-[#181819]` : `bg-slate-50`}`}>
 
             <div className='w-full h-[150px]'>
-                <div className={`flex w-full h-[150px] border-b-[1px] border-slate-100 justify-center items-center fixed z-10 transition-all ${nightMode ? `bg-[#2f2f32] border-[#2f2f32]`:`bg-[#ffffff]`}`}>
+                <div className={`flex w-full h-[150px] border-b-[1px]  justify-center items-center fixed z-10 transition-all ${nightMode ? `bg-[#2f2f32] border-[#2f2f32]`:`bg-[#ffffff] border-slate-100`}`}>
                     <div className='h-200px w-[70%] flex justify-between'>
                         <div className='flex gap-5'>
                             <SearchBar data={data} filter={filter} nightMode={nightMode}/>
