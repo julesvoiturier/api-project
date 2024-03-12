@@ -13,14 +13,18 @@ import {
 const router = createBrowserRouter([
 
   {
-    path: "/Home",
+    path: "/api-project",
     element: <Home/>,
   },
   {
-    path: "/Home/CountryDetails/:theme/:id",
-    element: <CountryDetails nightMode/>,
+    path: "/Home/:theme/:currentFilter",
+    element: <Home/>,
   },
- ]);
+  {
+    path: "/Home/CountryDetails/:theme/:id/:filter",
+    element: <CountryDetails/>,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
